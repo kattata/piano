@@ -1,9 +1,8 @@
-$background: black;
-$piano-tile: white;
-$key-name: rgb(11, 179, 101);
-$main-font: 'Roboto', sans-serif;
-$grey: rgb(189, 189, 189);
-$blacktile: blue;
+@import '../scss/resets';
+
+@function size($fontsizevalue) {
+    @return map-get($fontsize, $fontsizevalue);
+}
 
 body {
     background-color: $background;
@@ -18,23 +17,23 @@ body {
     text-align: center;
     position: relative;
 
-    .keys-alone {
+    #{&}-alone {
         background-color: $piano-tile;
         // margin: 10px;
         padding: 250px 0 10px;
         border: 2px solid $grey;
-        font-size: 25px;
+        font-size: size("normal");
     }
 
     p {
         color: $grey;
-        font-size: 15px;
+        font-size: size("small");
         padding: 10px;
         margin-top: 5px;
         line-height: 1.5;
     }
 
-    .keys-blacktile {
+    #{&}-blacktile {
         height: 100px;
         width: 25px;
         color: blue;
@@ -44,8 +43,8 @@ body {
     }
 }
 
-@media (max-width: 470px) {
-    .keys {
-        display: none;
-    }
+.playing {
+    transition: all 0.07s ease;
+    transform: scale(1.1);
+    border: 2px solid $key-name;
 }
