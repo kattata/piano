@@ -8,3 +8,7 @@ $fontsize: (
     "normal": 25px,
     "small": 15px
 );
+
+@function size($fontsizevalue) {
+    @return map-get($fontsize, $fontsizevalue);
+}

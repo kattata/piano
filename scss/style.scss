@@ -1,8 +1,6 @@
 @import '../scss/resets';
+@import '../scss/variables';
 
-@function size($fontsizevalue) {
-    @return map-get($fontsize, $fontsizevalue);
-}
 
 body {
     background-color: $background;
@@ -16,18 +14,19 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
+    margin-top: 10%;
 
     #{&}-alone {
         background-color: $piano-tile;
-        // margin: 10px;
+        margin-right: 1px;
         padding: 250px 0 10px;
         border: 2px solid $grey;
-        font-size: 25px;
+        font-size: size("normal");
     }
 
     p {
         color: $grey;
-        font-size: 5px;
+        font-size: size("small");
         padding: 10px;
         margin-top: 5px;
         line-height: 1.5;

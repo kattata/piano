@@ -20,13 +20,15 @@ body {
           justify-content: center;
   text-align: center;
   position: relative;
+  margin-top: 10%;
 }
 
 .keys .keys-alone {
   background-color: white;
+  margin-right: 1px;
   padding: 250px 0 10px;
   border: 2px solid #bdbdbd;
-  font-size: 50px;
+  font-size: 25px;
 }
 
 .keys p {
